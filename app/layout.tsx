@@ -3,10 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import TanStackProvider from "@/components/providers/TanStackProvider";
 import AuthProvider from "@/components/providers/AuthProvider";
 
-import "@/styles/global.css";
-import "@/styles/reset.css";
-import "@/styles/variables.css";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
