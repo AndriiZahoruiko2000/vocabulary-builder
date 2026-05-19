@@ -1,18 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ApiError, globalApi } from "../../api";
 import { cookies } from "next/headers";
-import { parse } from "cookie";
 
-export const POST = async (req: NextRequest) => {
+export const GET = async (req: NextRequest) => {
   try {
-    const body = await req.json();
-
-    const response = await globalApi.post("/users/signin", body);
-    console.log(response.headers);
-
+    const params = Object.fromEntries(req.nextUrl.searchParams.entries());
     const cookieStore = await cookies();
+    const token = cookieStore.get("token")?.value;
+    console.log(token);
 
-    cookieStore.set("token", response.data.token);
+    const response = await globalApi.get("/words/all", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      params,
+    });
 
     return NextResponse.json(response.data);
   } catch (error) {

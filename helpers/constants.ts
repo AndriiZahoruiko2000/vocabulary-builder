@@ -1,4 +1,5 @@
-export const SERVER_BASE_URL = "";
+export const SERVER_BASE_URL =
+  "https://vocab-builder-backend.p.goit.global/api";
 
 export const categories = [
   "verb",

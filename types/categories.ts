@@ -20,7 +20,7 @@ export interface Word {
 }
 
 export interface GetWordsResponse {
-  words: Word[];
+  results: Word[];
   totalPages: number;
   page: number;
   perPage: number;
