@@ -15,6 +15,7 @@ const CustomSelector = ({ categories, name }: CustomSelectorProps) => {
 
   const handleSelect = (value: string) => {
     setSelectedValue(value);
+    setIsShow(false);
   };
 
   const handleShowClick = () => {
@@ -22,18 +23,19 @@ const CustomSelector = ({ categories, name }: CustomSelectorProps) => {
   };
 
   return (
-    <div className={css["customSelector"]}>
+    <div className={css["custom-selector"]}>
       <input
         type="text"
         name={name}
         value={selectedValue}
         onChange={() => {}}
+        className={css["custom-input"]}
       />
 
       <div onClick={handleShowClick}>{selectedValue || "Categories"}</div>
 
       {isShow && (
-        <ul>
+        <ul className={css["category-list"]}>
           {categories.map((category, index) => {
             return (
               <li

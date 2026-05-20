@@ -4,9 +4,11 @@ import WordsList from "@/components/WordsList/WordsList";
 
 const Page = () => {
   return (
-    <div className={css["page"]}>
-      <FilterForm />
-      <WordsList />
+    <div className={css["dictionary"]}>
+      <div className="container">
+        <FilterForm />
+        <WordsList />
+      </div>
     </div>
   );
 };

@@ -1,0 +1,29 @@
+.custom-selector {
+  margin-bottom: 28px;
+  border: 1px solid rgba(18, 20, 23, 0.1);
+  border-radius: 15px;
+  padding-block: 12px;
+  padding-inline: 24px;
+  width: 164px;
+  height: 48px;
+  position: relative;
+}
+
+.custom-input {
+  display: none;
+}
+
+.category-list {
+  border-radius: 15px;
+  padding-block: 12px;
+  padding-inline: 24px;
+  width: 189px;
+  height: 368px;
+  padding: 12px 24px;
+  box-shadow: 0 4px 47px 0 rgba(18, 20, 23, 0.08);
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 48px;
+  width: 100%;
+}

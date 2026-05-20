@@ -1,16 +1,19 @@
 "use client";
-import { getWords } from "@/services/words";
+
 import css from "./FilterForm.module.css";
 import CustomSelector from "../custom-components/CustomSelector/CustomSelector";
 import { categories } from "@/helpers/constants";
+import { useFilterWordsStore } from "@/store/filterWordsStore";
 
 const FilterForm = () => {
+  const setWordsParams = useFilterWordsStore((s) => s.setWordsParams);
+
   const handleSubmit = async (formData: FormData) => {
     const wordsData = {
       category: formData.get("category") as string,
     };
 
-    const response = await getWords(wordsData);
+    setWordsParams(wordsData);
   };
   return (
     <div className={css["filterForm"]}>

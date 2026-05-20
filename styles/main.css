@@ -1,0 +1,27 @@
+@import "./reset.css";
+@import "./variables.css";
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-geist-sans), var(--font-family-base), sans-serif;
+  color: var(--primary-dark);
+  background-color: var(--primary-light);
+  line-height: var(--line-height-base);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  width: 1440px;
+  padding: 0 100px;
+  margin: 0 auto;
+}

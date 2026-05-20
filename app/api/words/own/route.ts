@@ -1,16 +1,19 @@
 import { cookies } from "next/headers";
+import { NextRequest, NextResponse } from "next/server";
 import { ApiError, globalApi } from "../../api";
-import { NextResponse } from "next/server";
 
-export const POST = async () => {
+export const GET = async (req: NextRequest) => {
   try {
+    const params = Object.fromEntries(req.nextUrl.searchParams.entries());
     const cookieStore = await cookies();
     const token = cookieStore.get("token")?.value;
+    console.log(token);
 
-    const response = await globalApi.post("/users/signout", null, {
+    const response = await globalApi.get("/words/own", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
+      params,
     });
 
     return NextResponse.json(response.data);

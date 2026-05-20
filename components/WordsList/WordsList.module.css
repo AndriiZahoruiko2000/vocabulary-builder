@@ -1,0 +1,17 @@
+.table {
+  border-radius: 15px;
+  width: 1240px;
+  max-height: 640px;
+  border-collapse: collapse;
+}
+
+.table-head {
+  border: 1px solid #dbdbdb;
+  background-color: rgba(133, 170, 159, 0.1);
+}
+
+.table-row-item {
+  border: 1px solid #dbdbdb;
+  width: 23%;
+  padding: 22px;
+}

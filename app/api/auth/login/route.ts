@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ApiError, globalApi } from "../../api";
 import { cookies } from "next/headers";
-import { parse } from "cookie";
 
 export const POST = async (req: NextRequest) => {
   try {

@@ -1,0 +1,32 @@
+.auth-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.auth-profile-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  width: 48px;
+  height: 48px;
+  background-color: #85aa9f;
+}
+
+.auth-logout {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logout-btn {
+  border: none;
+  background: none;
+}
