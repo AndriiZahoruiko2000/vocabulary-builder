@@ -20,17 +20,19 @@ const AuthButtons = () => {
 
   return (
     <div className={css["auth-buttons"]}>
-      <div className={css["auth-profile-info"]}>
-        <p className={css["auth-buttons-name"]}>Iryna</p>
-        <div className={css["profile"]}>
-          <Image
-            src={"/auth/profile.svg"}
-            alt="profile-img"
-            width={16}
-            height={16}
-          />
+      {isAuth && (
+        <div className={css["auth-profile-info"]}>
+          <p className={css["auth-buttons-name"]}>Iryna</p>
+          <div className={css["profile"]}>
+            <Image
+              src={"/auth/profile.svg"}
+              alt="profile-img"
+              width={16}
+              height={16}
+            />
+          </div>
         </div>
-      </div>
+      )}
       <div className={css["auth-logout"]}>
         {isAuth ? (
           <button className={css["logout-btn"]} onClick={handleLogout}>

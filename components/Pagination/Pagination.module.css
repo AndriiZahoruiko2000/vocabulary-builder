@@ -1,0 +1,98 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.pagination :global(ul) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination :global(li) {
+  list-style: none;
+}
+
+.pagination :global(a) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #121417;
+  background-color: #fcfcfc;
+  cursor: pointer;
+  transition:
+    color 200ms ease,
+    background-color 200ms ease,
+    border-color 200ms ease;
+}
+
+.pagination :global(a:hover),
+.pagination :global(a:focus) {
+  border-color: #85aa9f;
+  color: #fcfcfc;
+  background-color: #85aa9f;
+  outline: none;
+}
+
+.pagination :global(.selected a) {
+  border-color: #85aa9f;
+  color: #fcfcfc;
+  background-color: #85aa9f;
+}
+
+.pagination :global(.disabled a) {
+  border-color: rgba(18, 20, 23, 0.1);
+  color: rgba(18, 20, 23, 0.3);
+  background-color: rgba(18, 20, 23, 0.03);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pagination :global(.previous a),
+.pagination :global(.next a) {
+  min-width: 92px;
+}
+
+.pagination :global(.break a) {
+  border-color: transparent;
+  background-color: transparent;
+  cursor: default;
+}
+
+.pagination :global(.break a:hover),
+.pagination :global(.break a:focus) {
+  color: #121417;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .pagination {
+    margin-top: 24px;
+  }
+
+  .pagination :global(ul) {
+    gap: 4px;
+  }
+
+  .pagination :global(a) {
+    min-width: 34px;
+    height: 34px;
+    padding: 0 8px;
+    font-size: 13px;
+  }
+
+  .pagination :global(.previous a),
+  .pagination :global(.next a) {
+    min-width: 74px;
+  }
+}

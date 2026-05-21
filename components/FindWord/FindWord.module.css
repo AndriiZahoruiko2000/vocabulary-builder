@@ -1,0 +1,13 @@
+.find-word {
+  display: flex;
+  align-items: center;
+}
+
+.find-word-input {
+  border: 1px solid rgba(18, 20, 23, 0.1);
+  border-radius: 15px;
+  padding-block: 12px;
+  padding-inline: 24px;
+  width: 274px;
+  height: 48px;
+}

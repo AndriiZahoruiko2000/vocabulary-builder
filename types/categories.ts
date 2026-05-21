@@ -42,3 +42,14 @@ export interface UserWordResponse {
   page: number;
   perPage: number;
 }
+
+export interface WordStatisticsResponse {
+  totalCount: number;
+}
+
+export interface CreateWordBody {
+  en: string;
+  ua: string;
+  category: string;
+  isIrregular: boolean;
+}

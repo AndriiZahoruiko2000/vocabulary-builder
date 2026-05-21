@@ -1,0 +1,26 @@
+.pop-up-wrapper {
+  position: relative;
+}
+
+.open-pop-up-menu {
+  border: none;
+  background: none;
+}
+
+.table-row-item {
+  border: 1px solid #dbdbdb;
+  width: 23%;
+  padding: 22px;
+}
+
+.pop-up-menu {
+  position: absolute;
+  border-radius: 15px;
+  padding-block: 12px;
+  padding-inline: 24px;
+  width: 124px;
+  height: 80px;
+  box-shadow: 0 4px 47px 0 rgba(18, 20, 23, 0.08);
+  background: #fff;
+  z-index: 1;
+}

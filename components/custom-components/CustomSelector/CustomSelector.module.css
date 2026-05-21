@@ -1,5 +1,4 @@
 .custom-selector {
-  margin-bottom: 28px;
   border: 1px solid rgba(18, 20, 23, 0.1);
   border-radius: 15px;
   padding-block: 12px;
@@ -26,4 +25,8 @@
   left: 0;
   top: 48px;
   width: 100%;
+}
+
+.is-dark-mode {
+  border: 1px solid rgba(252, 252, 252, 0.3);
 }

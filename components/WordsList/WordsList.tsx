@@ -3,16 +3,22 @@ import { useQuery } from "@tanstack/react-query";
 import css from "./WordsList.module.css";
 import { getWordsOwn } from "@/services/words";
 import { useFilterWordsStore } from "@/store/filterWordsStore";
+import Pagination from "../Pagination/Pagination";
+import { useState } from "react";
+
+import WordItem from "../WordItem/WordItem";
 
 const WordsList = () => {
   const wordsParams = useFilterWordsStore((s) => s.wordsParams);
+  const [page, setPage] = useState(1);
 
   const wordsQuery = useQuery({
-    queryKey: ["getWordsOwn", wordsParams],
-    queryFn: () => getWordsOwn(wordsParams),
+    queryKey: ["getWordsOwn", wordsParams, page],
+    queryFn: () => getWordsOwn({ ...wordsParams, page }),
   });
 
   const words = wordsQuery.data?.results || [];
+  const totalPages = wordsQuery.data?.totalPages || 1;
 
   return (
     <div className={css["words-list"]}>
@@ -28,19 +34,12 @@ const WordsList = () => {
         </thead>
         <tbody className={css["table-body"]}>
           {words.map((word, index) => {
-            return (
-              <tr key={index} className={css["table-row"]}>
-                <td className={css["table-row-item"]}>{word.en}</td>
-                <td className={css["table-row-item"]}>{word.ua}</td>
-                <td className={css["table-row-item"]}>{word.category}</td>
-                <td className={css["table-row-item"]}>{word.progress}</td>
-                <td className={css["table-row-item"]}>...</td>
-              </tr>
-            );
+            return <WordItem word={word} key={index} />;
           })}
         </tbody>
       </table>
-      <ul></ul>
+
+      <Pagination totalPages={totalPages} setPage={setPage} />
     </div>
   );
 };

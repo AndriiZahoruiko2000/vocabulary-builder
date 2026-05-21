@@ -3,13 +3,19 @@
 import { SelectorItem } from "@/types/categories";
 import css from "./CustomSelector.module.css";
 import { useState } from "react";
+import clsx from "clsx";
 
 interface CustomSelectorProps {
   categories: SelectorItem[];
   name: string;
+  isDarkMode?: boolean;
 }
 
-const CustomSelector = ({ categories, name }: CustomSelectorProps) => {
+const CustomSelector = ({
+  categories,
+  name,
+  isDarkMode,
+}: CustomSelectorProps) => {
   const [isShow, setIsShow] = useState(false);
   const [selectedValue, setSelectedValue] = useState("");
 
@@ -23,7 +29,12 @@ const CustomSelector = ({ categories, name }: CustomSelectorProps) => {
   };
 
   return (
-    <div className={css["custom-selector"]}>
+    <div
+      className={clsx(
+        css["custom-selector"],
+        isDarkMode && css["is-dark-mode"],
+      )}
+    >
       <input
         type="text"
         name={name}

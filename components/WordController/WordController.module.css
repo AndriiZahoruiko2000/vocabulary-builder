@@ -1,0 +1,50 @@
+.word-controller {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.statistic {
+  font-family: "Roboto", sans-serif;
+
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 24px; */
+  line-height: 1.5;
+  color: rgba(18, 20, 23, 0.5);
+}
+
+.add-word-box {
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-word-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 24px; */
+  line-height: 1.5;
+  color: #121417;
+}
+
+.word-train-link-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.word-train-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 24px; */
+  line-height: 1.5;
+  color: #121417;
+}
