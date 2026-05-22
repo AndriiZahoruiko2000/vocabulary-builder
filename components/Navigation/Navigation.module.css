@@ -1,5 +1,10 @@
+.navigation {
+  display: flex;
+}
+
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
@@ -9,4 +14,16 @@
   font-weight: 500;
   font-size: 14px;
   color: #121417;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    order: 3;
+    width: 100%;
+  }
+
+  .navigation-list {
+    width: 100%;
+    gap: 8px 12px;
+  }
 }

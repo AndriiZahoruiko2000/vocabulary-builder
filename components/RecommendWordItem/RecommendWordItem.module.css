@@ -1,0 +1,41 @@
+.recommend-item {
+  border-bottom: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  padding: 14px;
+  width: 25%;
+  min-height: 56px;
+  background-color: #fcfcfc;
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.add-btn {
+  border: none;
+  background: none;
+  width: 100%;
+  min-width: 120px;
+  padding: 8px 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .recommend-item {
+    padding: 18px;
+    min-height: 64px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .recommend-item {
+    padding: 22px;
+    min-height: 72px;
+    font-size: 16px;
+  }
+
+  .add-btn {
+    width: 208px;
+  }
+}

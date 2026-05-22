@@ -1,6 +1,13 @@
+.words-list {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
 .table {
   border-radius: 15px;
-  width: 1240px;
+  width: 100%;
+  min-width: 720px;
   max-height: 640px;
   border-collapse: collapse;
 }
@@ -13,5 +20,29 @@
 .table-row-item {
   border: 1px solid #dbdbdb;
   width: 23%;
-  padding: 22px;
+  padding: 14px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 768px) {
+  .table {
+    min-width: 900px;
+  }
+
+  .table-row-item {
+    padding: 18px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .table {
+    min-width: 0;
+  }
+
+  .table-row-item {
+    padding: 22px;
+    font-size: 16px;
+  }
 }

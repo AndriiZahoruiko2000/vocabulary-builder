@@ -5,6 +5,8 @@ import css from "./WordItem.module.css";
 import Modal from "../Modal/Modal";
 import EditForm from "../EditForm/EditForm";
 import { useState } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { deleteWord } from "@/services/words";
 
 interface WordItemProps {
   word: UserWord;
@@ -30,6 +32,18 @@ const WordItem = ({ word }: WordItemProps) => {
     setIsShowPopUp(false);
   };
 
+  const queryClient = useQueryClient();
+
+  const deleteMutation = useMutation({
+    mutationKey: ["deleteWord"],
+    mutationFn: () => deleteWord(word._id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["getWordsOwn"],
+      });
+    },
+  });
+
   return (
     <>
       <tr className={css["table-row"]}>
@@ -53,7 +67,15 @@ const WordItem = ({ word }: WordItemProps) => {
                 >
                   Edit
                 </p>
-                <p className={css["pop-up-item"]}>Delete</p>
+                <p
+                  className={css["pop-up-item"]}
+                  onClick={() => {
+                    deleteMutation.mutate();
+                    closePopUp();
+                  }}
+                >
+                  Delete
+                </p>
               </div>
             )}
           </div>

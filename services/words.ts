@@ -1,5 +1,6 @@
 import {
   CreateWordBody,
+  DeleteResponse,
   GetWordsParams,
   GetWordsResponse,
   UserWord,
@@ -8,7 +9,7 @@ import {
 } from "@/types/categories";
 import { nextApi } from "./api";
 
-export const getWords = async (params: GetWordsParams) => {
+export const getWords = async (params?: GetWordsParams) => {
   const response = await nextApi.get<GetWordsResponse>("/words/all", {
     params,
   });
@@ -35,5 +36,15 @@ export const createWord = async (body: CreateWordBody) => {
 
 export const editWord = async (id: string, body: CreateWordBody) => {
   const response = await nextApi.patch<UserWord>(`/words/edit/${id}`, body);
+  return response.data;
+};
+
+export const deleteWord = async (id: string) => {
+  const response = await nextApi.delete<DeleteResponse>(`/words/delete/${id}`);
+  return response.data;
+};
+
+export const addWord = async (id: string) => {
+  const response = await nextApi.post<UserWord>(`/words/add/${id}`);
   return response.data;
 };

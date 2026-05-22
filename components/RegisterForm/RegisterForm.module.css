@@ -1,31 +1,31 @@
 .register-container {
-  width: 1440px;
-  padding-left: 100px;
-  padding-right: 134px;
-  padding-top: 128px;
-  padding-bottom: 80px;
+  width: 100%;
+  max-width: 1440px;
+  padding: 32px 16px 56px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
 .register-box {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
-  gap: 80px;
+  flex-direction: column-reverse;
+  gap: 32px;
 }
 
 .register {
   border-radius: 30px;
-  width: 627px;
-  height: 591px;
-  padding: 48px 64px;
+  width: 100%;
+  max-width: 627px;
+  min-height: 0;
+  padding: 32px 20px;
   background-color: rgba(133, 170, 159, 0.1);
 }
 
 .register-title {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 32px;
 
   /* line-height: 48px; */
   line-height: 1.2;
@@ -37,7 +37,7 @@
 .register-text {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
 
   /* line-height: 30px; */
   line-height: 1.5;
@@ -56,7 +56,7 @@
   border: 1px solid rgba(18, 20, 23, 0.1);
   border-radius: 15px;
   padding: 16px;
-  width: 500px;
+  width: 100%;
   height: 56px;
 }
 
@@ -74,8 +74,8 @@
   border: none;
   border-radius: 30px;
   padding-block: 16px;
-  padding-inline: 228px;
-  width: 500px;
+  padding-inline: 24px;
+  width: 100%;
   height: 60px;
   background-color: #85aa9f;
   font-family: "Roboto", sans-serif;
@@ -106,4 +106,51 @@
   position: fixed;
   right: 0;
   bottom: 0;
+  z-index: -1;
+  opacity: 0.35;
+}
+
+.register-img {
+  width: min(100%, 498px);
+}
+
+@media screen and (min-width: 768px) {
+  .register-container {
+    padding: 64px 32px 72px;
+  }
+
+  .register {
+    padding: 48px 64px;
+  }
+
+  .register-title {
+    font-size: 40px;
+  }
+
+  .register-text {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .register-container {
+    padding-left: 100px;
+    padding-right: 134px;
+    padding-top: 128px;
+    padding-bottom: 80px;
+  }
+
+  .register-box {
+    flex-direction: row-reverse;
+    gap: 80px;
+  }
+
+  .register {
+    min-height: 591px;
+  }
+
+  .register-vector {
+    z-index: auto;
+    opacity: 1;
+  }
 }

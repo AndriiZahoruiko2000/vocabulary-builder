@@ -5,13 +5,13 @@ const Navigation = () => {
   return (
     <nav className={css["navigation"]}>
       <ul className={css["navigation-list"]}>
-        <Link href={"/"} className={css["navigation-list-item"]}>
+        <Link href={"/dictionary"} className={css["navigation-list-item"]}>
           Dictionary
         </Link>
-        <Link href={"/"} className={css["navigation-list-item"]}>
+        <Link href={"/recommend"} className={css["navigation-list-item"]}>
           Recommend
         </Link>
-        <Link href={"/"} className={css["navigation-list-item"]}>
+        <Link href={"/training"} className={css["navigation-list-item"]}>
           Training
         </Link>
       </ul>

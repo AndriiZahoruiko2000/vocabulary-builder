@@ -9,15 +9,18 @@
   height: 100%;
   background-color: #0000005f;
   z-index: 99999;
+  padding: 16px;
 }
 
 .modal {
   position: relative;
   border-radius: 30px;
+  width: 100%;
   max-width: 627px;
-  max-height: 621px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
   background-color: #85aa9f;
-  padding: 48px 64px;
+  padding: 40px 20px 32px;
 }
 
 .close-modal-btn {
@@ -29,4 +32,15 @@
   right: 20px;
   width: 20px;
   height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 32px;
+  }
+
+  .modal {
+    padding: 48px 64px;
+    max-height: calc(100vh - 64px);
+  }
 }

@@ -53,3 +53,8 @@ export interface CreateWordBody {
   category: string;
   isIrregular: boolean;
 }
+
+export interface DeleteResponse {
+  message: string;
+  id: string;
+}

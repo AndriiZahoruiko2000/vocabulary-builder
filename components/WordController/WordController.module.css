@@ -1,7 +1,8 @@
 .word-controller {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 16px;
+  gap: 12px 16px;
 }
 
 .statistic {
@@ -47,4 +48,14 @@
   /* line-height: 24px; */
   line-height: 1.5;
   color: #121417;
+}
+
+@media screen and (max-width: 767px) {
+  .word-controller {
+    justify-content: space-between;
+  }
+
+  .statistic {
+    width: 100%;
+  }
 }

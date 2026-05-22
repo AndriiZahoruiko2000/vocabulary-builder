@@ -10,7 +10,10 @@
 .table-row-item {
   border: 1px solid #dbdbdb;
   width: 23%;
-  padding: 22px;
+  padding: 14px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-word;
 }
 
 .pop-up-menu {
@@ -23,4 +26,18 @@
   box-shadow: 0 4px 47px 0 rgba(18, 20, 23, 0.08);
   background: #fff;
   z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .table-row-item {
+    padding: 18px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .table-row-item {
+    padding: 22px;
+    font-size: 16px;
+  }
 }

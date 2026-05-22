@@ -1,0 +1,49 @@
+.recommend-word-list {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.recommend-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+
+.recommend-item {
+  border-bottom: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  border-radius: 8px 0 0 0;
+  padding: 14px;
+  width: 25%;
+  min-height: 56px;
+  background-color: rgba(133, 170, 159, 0.1);
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+  word-break: break-word;
+}
+
+@media screen and (min-width: 768px) {
+  .recommend-table {
+    min-width: 820px;
+  }
+
+  .recommend-item {
+    padding: 18px;
+    min-height: 64px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .recommend-table {
+    min-width: 0;
+  }
+
+  .recommend-item {
+    padding: 22px;
+    min-height: 72px;
+    font-size: 16px;
+  }
+}
